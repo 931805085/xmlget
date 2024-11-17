@@ -7,7 +7,7 @@
 #   [ATTR="VAL"] 属性过滤器，用于过滤已经选择的标签，搭配<TAG>实现精确定位节点
 #   [ATTR]       属性选择器，当遍历到它时，将直接返回ATTR属性的值
 #   TEXT         内容选择器，当遍历到它时，将直接返回当前选择的节点的内容
-# example: get_xml '<http-listener>/[name="admin-listener"]/<http-protocol>/<property>/[name="requestCharacterEncoding"]/[value]' /data/dev/xml/server.config;
+# example: xmlget '<http-listener>/[name="admin-listener"]/<http-protocol>/<property>/[name="requestCharacterEncoding"]/[value]' /data/dev/xml/server.config;
 #         获取/data/dev/xml/server.config中name属性的值为admin-listener的http-listener节点的http-protocol节点下的name属性值为"requestCharacterEncoding"的property节点的value属性值
 # param2: 被读取的xml文件路径,可选，可以使用管道符输入
 xmlget(){
